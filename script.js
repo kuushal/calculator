@@ -84,3 +84,4 @@ function operate(operator, first, second) {
     }
 }
 
+// todo: add keyboard support
