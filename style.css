@@ -148,7 +148,7 @@ li:hover {
     transform: scale(1.059);
 }
 
-.operand {
+.operator {
     color: white;
     background-color: var(--background);
 }
