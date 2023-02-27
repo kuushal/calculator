@@ -152,3 +152,8 @@ li:hover {
     color: white;
     background-color: var(--background);
 }
+
+.disabled {
+    pointer-events: none;
+    opacity: 0.6;
+}

@@ -21,16 +21,27 @@ calculateResult.addEventListener('click', calculate);
 function calculate() {
     secondNumber = +input;
     input = operate(operator, firstNumber, secondNumber);
-    result.textContent = input;
+    result.textContent = input.toFixed(2);
+
+    firstNumber = '0';
+    secondNumber = '0';
+    operator = '+';
 }
 
 
 function clearResult() {
     input = '';
     result.textContent = '0';
+
+    const decimal = document.querySelector('.decimal');
+    decimal.classList.remove("disabled");
 }
 
 function getFirstInput(e) {
+    if (e.target.innerHTML === '.') {
+        e.currentTarget.className += " disabled";
+    }
+
     input += e.target.innerHTML;
     console.log(input);
     result.textContent = input;
